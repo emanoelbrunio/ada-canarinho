@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(180deg,#008000,#025418);
+    padding: 20px 150px;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header img {
+   height: 70px;
+}
+
+.logo {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-family:'Roboto';
+    font-size: 50px;
+    color: #f1cc5c;
+    text-shadow: black 2px 2px 2px;
+}
+
+#buscar{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#event-search{
+    padding: 10px 40px;
+  
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+#event-search:focus {
+    outline: 1px solid #f1cc5c;
+}
+#event-search::placeholder {
+    color: gainsboro;
+    padding-left: 10px;
+}
+
+
+.search{
+    position: absolute;
+    left: 0;
+    width: 20px;
+    margin-left: 15px;
+    opacity: 0.2;
+}
+  
+#buscar:hover{
+    cursor: pointer;
+}
+
+.home {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 150px;
+    transition: 0.5 all;
+}
+
+.lista {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    transition: 0.5s all;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 20px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: 1s all;
+
+}
+
+.foto-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    transition: 0.5s all
+}
+
+
+.foto-produto {
+    width: 300px;
+    border-radius: 12px;
+}
+
+.titulo {
+    color: #121212;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: 0.5s all
+    
+}
+
+.ctas {
+    width: 100%;
+    transition: 0.5s;
+    display: none;
+    position: absolute;
+    z-index: 100;
+    transition: 0.5s all
+}
+
+.add {
+    background-color: #3483fa;
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    transition: 0.5s all;
+}
+
+.produto:hover .ctas {
+    display: block;
+    bottom: 0;
+    opacity: 1;
+}
+
+.precos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+}
+
+.descontos {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    margin-bottom: 5px;
+
+}
+
+.porcentagem {
+    color: #00a650;
+    font-weight: 500;
+    margin: 0;
+}
+
+.preco-antigo {
+    color: rgb(250, 170, 170);
+    text-decoration: line-through;
+    margin: 0;
+}
+
+.preco-atual {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: #121212;
+
+}
+
+.preco-atual sup {
+    font-size: 18px;
+}
+
+.comprar:hover{
+  opacity: 0.7;
+  
+}
+
+
+.add:hover{
+    background: #0066ff;
+    box-shadow: 0.5px 0.5px 5px 2px #0066ff48;
+}
+
+button>i{
+    margin-right: 5px;
+}
+
+@media (max-width: 1300px) {
+    .home, header {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+@media (max-width: 1200px) {
+    .home, header {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .lista, header {
+        justify-content: center;
+    }
+}
+@media (max-width: 820px) {
+    .home, header {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media (max-width: 400px) {
+    .home, header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 370px) {
+    .foto-produto {
+        width: 250px;
+    }
+}
+@media (max-width: 350px) {
+    .foto-produto {
+        width: 200px;
+    }
+}
